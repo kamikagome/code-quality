@@ -13,10 +13,6 @@ Download JSON from any REST API and save it as a flat CSV — no external depend
 - Structured logging with optional `--verbose` debug output
 - Zero runtime dependencies — pure Python stdlib
 
-## Requirements
-
-Python 3.9+
-
 ## Usage
 
 ```bash
@@ -47,18 +43,6 @@ python fetch_to_csv.py --verbose
 | `--key` | — | Dot-path into the JSON response |
 | `--verbose / -v` | — | Enable debug logging |
 
-## Example output
-
-Given a response like:
-```json
-[{"id": 1, "name": "Alice", "address": {"city": "Berlin"}}]
-```
-
-The CSV will contain:
-```
-id,name,address.city
-1,Alice,Berlin
-```
 
 ## Running tests
 
@@ -67,6 +51,16 @@ python -m pytest test_fetch_to_csv.py -v
 ```
 
 25 tests, no network calls required (all HTTP interactions are mocked).
+
+## Summary
+
+- Code quality from AI depends on prompt quality and model choice
+- Opus for complex tasks, Sonnet for everyday work, Haiku for quick fixes
+- Always check generated code: run it, test it, review it
+- A CLAUDE.md file with quality rules is your best friend
+- The two-step approach (generation + review) gives the best results
+- Don't trust AI in critical areas: security, cryptography, finance
+- Automated checks (linter, tests, types) catch most issues
 
 ## License
 
